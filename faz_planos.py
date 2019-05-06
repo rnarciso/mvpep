@@ -55,7 +55,7 @@ class Rsrc:
 
 
 class settings:
-    username = '106927'
+    username = 'dXR4bmtq'
     #password = 'uMrM3uToyp6cn6Sj'
     password = 'kKmopKunmGZkfGp0'
     beds = {'UTI': range(1, 20 + 1)}
@@ -63,7 +63,7 @@ class settings:
 
 pyautogui.PAUSE = 1
 pyautogui.FAILSAFE = True
-rsrc = Rsrc("C:\\Users\\lfutia\\Documents\\UTI LeForte\\app\\MVPEP\\resources")
+rsrc = Rsrc(".\\resources")
 
 
 def GetUUID():
@@ -172,7 +172,7 @@ def login():
 
     wait_and_click(rsrc.username_field)
     time.sleep(1/2)
-    pyautogui.typewrite(settings.username)
+    pyautogui.typewrite(decode(GetUUID(), settings.username))
     time.sleep(1/2)
     pyautogui.typewrite(['tab'])
     time.sleep(1/2)
@@ -228,6 +228,3 @@ def delete_plans(bedRange=[1, 20]):
 
 if __name__ == "__main__":
     main()
-
-
-print(2)
